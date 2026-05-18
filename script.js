@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Highlight active nav link
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        const linkPage = link.getAttribute('href');
+        if (currentPage === linkPage || (currentPage === '' && linkPage === 'index.html')) {
+            link.classList.add('active');
+        }
+    });
+
     // Mobile Menu Toggle
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
@@ -19,16 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Header Scroll Effect
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.style.padding = '15px 0';
-            header.style.backgroundColor = 'rgba(5, 5, 5, 0.95)';
-        } else {
-            header.style.padding = '20px 0';
-            header.style.backgroundColor = 'rgba(5, 5, 5, 0.9)';
-        }
-    });
+    // Header Scroll Effect removed as requested (now statically fixed)
 
     // Scroll Reveal Animation
     const revealElements = document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right');
@@ -47,19 +47,19 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.addEventListener('scroll', revealOnScroll);
-    // Trigger once on load
-    revealOnScroll();
-
+    
     // Number Counter Animation
     const stats = document.querySelectorAll('.stat-number');
     let hasAnimated = false;
 
     const animateStats = () => {
-        const statsSection = document.querySelector('.why-us-stats');
+        const statsSection = document.querySelector('.why-us-stats') || document.querySelector('.stats-preview-grid');
+        if (!statsSection) return; // Not on this page
+        
         const sectionTop = statsSection.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
 
-        if (sectionTop < windowHeight - 100 && !hasAnimated) {
+        if (sectionTop < windowHeight - 50 && !hasAnimated) {
             stats.forEach(stat => {
                 const target = +stat.getAttribute('data-target');
                 const duration = 2000; // 2 seconds
@@ -83,6 +83,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', animateStats);
 
+    // TRIGGER BOTH INSTANTLY ON LOAD
+    revealOnScroll();
+    animateStats();
+
+    // Trigger again after a tiny delay in case layout is still settling/rendering
+    setTimeout(() => {
+        revealOnScroll();
+        animateStats();
+    }, 150);
+
     // Smooth Scrolling for Anchor Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -103,4 +113,77 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+
+    // Smooth Page Transitions
+    const pageLinks = document.querySelectorAll('a[href$=".html"]');
+    pageLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            // Only intercept if it's not opening in a new tab
+            if (this.target !== "_blank") {
+                const target = this.getAttribute('href');
+                
+                // Avoid reloading and animations if clicking the current page
+                const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                const targetPage = target.split('/').pop();
+                
+                if (currentPage === targetPage || (currentPage === '' && targetPage === 'index.html')) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    return;
+                }
+                
+                e.preventDefault();
+                document.body.classList.add('fade-out');
+                setTimeout(() => {
+                    window.location.href = target;
+                }, 400); // Wait for the 0.4s CSS animation to complete
+            }
+        });
+    });
+    // Fix BFCache issues (Back/Forward button freeze)
+    window.addEventListener('pageshow', (event) => {
+        if (event.persisted) {
+            document.body.classList.remove('fade-out');
+        }
+    });
+
+});
+
+// --- Modal Functions ---
+
+window.openModal = function (modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.add('show');
+        document.body.classList.add('modal-open');
+        document.documentElement.classList.add('modal-open');
+    }
+};
+
+window.closeModal = function (modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.remove('show');
+        document.body.classList.remove('modal-open');
+        document.documentElement.classList.remove('modal-open');
+    }
+};
+
+window.closeModalOutside = function (event, modalId) {
+    const modal = document.getElementById(modalId);
+    // If the user clicks directly on the modal background (not the content)
+    if (event.target === modal) {
+        window.closeModal(modalId);
+    }
+};
+
+// Close modals with Escape key
+document.addEventListener('keydown', function (event) {
+    if (event.key === "Escape") {
+        const openModals = document.querySelectorAll('.modal.show');
+        openModals.forEach(modal => {
+            window.closeModal(modal.id);
+        });
+    }
 });

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | INTERNATIONAL PRIVATE SECURITY Z&O</title>
+    <meta name="description"
+        content="Servicios de seguridad privada de élite. Protección personal, vigilancia, custodios y seguridad intramuros.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <link rel="shortcut icon" href="assets/logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css?v=24">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Logo International Private Security Z&O" class="logo-img">
+                <div class="logo-text">
+                    <span class="company-name">INTERNATIONAL PRIVATE SECURITY</span>
+                    <span class="company-legal text-gold">Z&O S. DE R.L. C.V.</span>
+                </div>
+            </a>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="cobertura.html">Cobertura</a></li>
+                    <li><a href="bolsa.html">Bolsa De Trabajo</a></li>
+                    <li><a href="contacto.html" class="btn-primary">Contáctanos</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-h1 fade-in-up">Nuestros <span class="text-gold">Servicios</span></h1>
+                    <div class="hero-text-box fade-in-up delay-1">
+                        <p class="hero-description">Soluciones integrales de seguridad privada de élite adaptadas con precisión a sus requerimientos de protección.</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#services" class="scroll-indicator fade-in delay-2">
+                <span class="scroll-mouse">
+                    <span class="scroll-wheel"></span>
+                </span>
+                <span class="scroll-text">Deslizar</span>
+                <span class="scroll-arrow"></span>
+            </a>
+        </section>
+
+        <section id="services" class="services section-padding">
+            <div class="container">
+                <div class="text-center scroll-reveal" style="margin-bottom: 50px;">
+                    <h2 class="section-title">Nuestras Líneas de <span class="text-gold">Protección</span></h2>
+                    <p style="max-width: 600px; margin: 0 auto; color: #a0aec0;">Haga clic en cualquiera de nuestras tarjetas de servicio para explorar a detalle nuestros rigurosos estándares operativos y planes tácticos.</p>
+                </div>
+                
+                <div class="carousel-container">
+                    <div class="services-carousel scroll-reveal">
+                        <div class="service-card" onclick="openModal('modal-personal')">
+                            <div class="service-image">
+                                <img src="assets/service_1.png" alt="Protección Personal">
+                            </div>
+                            <div class="service-info">
+                                <div class="icon-box">
+                                    <i class="fas fa-user-shield"></i>
+                                </div>
+                                <h3>Protección Personal</h3>
+                                <p>Escoltas altamente capacitados para garantizar su seguridad e integridad física en todo momento.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="service-card" onclick="openModal('modal-custodios')">
+                            <div class="service-image">
+                                <img src="assets/service_4.png" alt="Custodios">
+                            </div>
+                            <div class="service-info">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-truck-fast"></i>
+                                </div>
+                                <h3>Custodios De Bienes</h3>
+                                <p>Protección especializada para el transporte de mercancías y valores, garantizando una entrega segura y puntual.</p>
+                            </div>
+                        </div>
+                        <div class="service-card" onclick="openModal('modal-intramuros')">
+                            <div class="service-image">
+                                <img src="assets/service_5.png" alt="Seguridad Intramuros">
+                            </div>
+                            <div class="service-info">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-building-lock"></i>
+                                </div>
+                                <h3>Seguridad Intramuros</h3>
+                                <p>Seguridad interna para empresas, bodegas y zonas residenciales con personal altamente capacitado y protocolos estrictos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>                    
+            </div>
+        </section>
+
+        <!-- Sección de Filosofía y Valor Agregado (Nuevo) -->
+        <section class="service-philosophy section-padding" style="background-color: var(--primary-color); border-top: 1px solid rgba(255, 255, 255, 0.05); border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+            <div class="container philosophy-container">
+                <div class="philosophy-text scroll-reveal">
+                    <h2 class="section-title">Protección <span class="text-gold">Táctica e Integral</span></h2>
+                    <p class="lead-text">En Internacional Private Security Z&O, nuestra misión va más allá de la vigilancia estándar. Diseñamos esquemas operativos avanzados adaptados a las vulnerabilidades específicas de su entorno corporativo, comercial o personal.</p>
+                    <p>Cada uno de nuestros servicios está respaldado por un riguroso control de confianza, capacitación táctica continua ante situaciones de alto estrés y el uso de tecnologías de punta para garantizar una reacción inmediata.</p>
+                    
+                    <div class="philosophy-badges">
+                        <div class="ph-badge">
+                            <i class="fas fa-certificate text-gold"></i>
+                            <span>Certificaciones Federales</span>
+                        </div>
+                        <div class="ph-badge">
+                            <i class="fas fa-shield-halved text-gold"></i>
+                            <span>Respaldo Operativo 24/7</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="philosophy-features scroll-reveal">
+                    <div class="feature-small-card">
+                        <div class="f-icon"><i class="fas fa-user-check"></i></div>
+                        <div class="f-details">
+                            <h3>Selección Rigurosa</h3>
+                            <p>Todo nuestro personal pasa por pruebas estrictas de control de confianza, exámenes psicométricos y toxicológicos.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-small-card">
+                        <div class="f-icon"><i class="fas fa-satellite-dish"></i></div>
+                        <div class="f-details">
+                            <h3>Monitoreo y GPS</h3>
+                            <p>Seguimiento satelital en tiempo real para custodias y unidades patrulleras, coordinado con nuestro centro de comando.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-small-card">
+                        <div class="f-icon"><i class="fas fa-handcuffs"></i></div>
+                        <div class="f-details">
+                            <h3>Alineación Legal</h3>
+                            <p>Operamos en estricto cumplimiento con la Ley Federal de Seguridad Privada y normativas vigentes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Proceso Operativo (Nuevo) -->
+        <section class="service-process section-padding" style="background-color: var(--secondary-color);">
+            <div class="container">
+                <div class="text-center scroll-reveal" style="margin-bottom: 50px;">
+                    <h2 class="section-title">Proceso de <span class="text-gold">Despliegue Operativo</span></h2>
+                    <p style="max-width: 600px; margin: 0 auto; color: #a0aec0;">Garantizamos una transición y despliegue impecable mediante un método estructurado y auditable en cuatro fases clave.</p>
+                </div>
+                
+                <div class="process-grid">
+                    <div class="process-step scroll-reveal">
+                        <div class="step-num">01</div>
+                        <h3>Diagnóstico Operativo</h3>
+                        <p>Analizamos minuciosamente las instalaciones, rutas o perfiles de riesgo para detectar vulnerabilidades.</p>
+                    </div>
+                    
+                    <div class="process-step scroll-reveal">
+                        <div class="step-num">02</div>
+                        <h3>Planificación Táctica</h3>
+                        <p>Diseñamos las consignas específicas, asignamos al personal ideal y definimos los protocolos de comunicación.</p>
+                    </div>
+                    
+                    <div class="process-step scroll-reveal">
+                        <div class="step-num">03</div>
+                        <h3>Activación de Servicio</h3>
+                        <p>Desplegamos el estado de fuerza con supervisión presencial en la plaza y enlace directo con el centro de control Z&O.</p>
+                    </div>
+                    
+                    <div class="process-step scroll-reveal">
+                        <div class="step-num">04</div>
+                        <h3>Auditorías y Reportes</h3>
+                        <p>Realizamos evaluaciones periódicas, actualizamos bitácoras y enviamos reportes ejecutivos semanales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de CTA (Nuevo) -->
+        <section class="services-cta section-padding">
+            <div class="container services-cta-content scroll-reveal">
+                <h2>¿Necesita un Esquema de Seguridad a su Medida?</h2>
+                <p>Nuestros expertos están listos para realizar un análisis de vulnerabilidad inicial sin costo para su empresa o familia.</p>
+                <div class="cta-buttons">
+                    <a href="contacto.html" class="btn-primary">Solicitar Asesoría</a>
+                    <a href="https://wa.me/525548638428?text=Hola%2C%20me%20interesa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20seguridad%20privada%20de%20Z%26O.%20%C2%BFMe%20podr%C3%ADan%20asesorar%3F" target="_blank" class="btn-secondary">
+                        <i class="fab fa-whatsapp"></i> Hablar con un Asesor
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <a href="index.html" class="footer-brand" style="display: flex; align-items: center; gap: 15px; text-decoration: none;">
+                    <img src="assets/logo.png" alt="INTERNATIONAL PRIVATE SECURITY Z&O" class="footer-logo-img" style="height: 48px; width: auto; object-fit: contain;">
+                    <div class="footer-brand-text" style="display: flex; flex-direction: column;">
+                        <span class="footer-brand-title" style="font-size: 0.95rem; font-weight: 700; letter-spacing: 1px; color: #fff; line-height: 1.2;">INTERNATIONAL PRIVATE SECURITY</span>
+                        <span class="footer-brand-legal text-gold" style="font-size: 0.75rem; font-weight: 600; letter-spacing: 1.5px;">Z&O S. DE R.L. C.V.</span>
+                    </div>
+                </a>
+                <p class="brand-desc">Seguridad privada de alto nivel, comprometidos con la protección, confianza e integridad de nuestros clientes en todo momento y territorio nacional.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/people/International-Pr%C3%ADvate-Security-ZO/61590195831815/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/seguridadprivadazyo" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@internaprivasecurzyo" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Servicios</h4>
+                <ul>
+                    <li><a href="servicios.html">Protección Personal</a></li>
+                    <li><a href="servicios.html">Custodios De Bienes</a></li>
+                    <li><a href="servicios.html">Seguridad Intramuros</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Empresa</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="cobertura.html">Cobertura</a></li>
+                    <li><a href="bolsa.html">Bolsa De Trabajo</a></li>
+                    <li><a href="contacto.html">Contáctanos</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col contact-col">
+                <h4>Contacto</h4>
+                <ul class="footer-contact-info">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Ciudad de México, México</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+525548638428">+52 55 4863 8428</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:contacto@intersecurityzo.com">contacto@intersecurityzo.com</a>
+                    </li>
+                </ul>
+                <div class="footer-badge">
+                    <i class="fa-solid fa-shield-halved text-gold"></i>
+                    <span>Personal Certificado & Protegido 24/7</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p class="copyright">&copy; 2025 INTERNATIONAL PRIVATE SECURITY Z&O S. DE R.L. C.V. Todos los derechos reservados.</p>
+                <div class="footer-creator">
+                    Desarrollado por <a href="https://jcsolucionesinformaticas.com.mx" target="_blank">JC Soluciones Informáticas</a>
+                </div>
+                <div class="footer-legal-links">
+                    <a href="#">Aviso de Privacidad</a>
+                    <span class="divider">|</span>
+                    <a href="#">Términos de Servicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals for Services -->
+    <div id="modal-personal" class="modal" onclick="closeModalOutside(event, 'modal-personal')">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal-personal')">&times;</span>
+            <div class="modal-header">
+                <i class="fas fa-user-shield text-gold"></i>
+                <h2>Protección Personal</h2>
+            </div>
+            <div class="modal-body">
+                <p>Escoltas altamente capacitados para garantizar su seguridad e integridad física en todo momento. Nuestro personal cuenta con un entrenamiento táctico riguroso y una excelente presentación.</p>
+                <ul class="modal-features">
+                    <li><i class="fas fa-check"></i> Análisis detallado de rutas y rutinas diarias.</li>
+                    <li><i class="fas fa-check"></i> Personal con capacitación en manejo evasivo and defensivo.</li>
+                    <li><i class="fas fa-check"></i> Vehículos blindados disponibles bajo solicitud.</li>
+                    <li><i class="fas fa-check"></i> Discreción y confidencialidad absoluta en todo momento.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-custodios" class="modal" onclick="closeModalOutside(event, 'modal-custodios')">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal-custodios')">&times;</span>
+            <div class="modal-header">
+                <i class="fa-solid fa-truck-fast text-gold"></i>
+                <h2>Custodios De Bienes</h2>
+            </div>
+            <div class="modal-body">
+                <p>Protección especializada para el transporte de mercancías y valores, garantizando una entrega segura y puntual de principio a fin, en todo el territorio nacional.</p>
+                <ul class="modal-features">
+                    <li><i class="fas fa-check"></i> Custodia de mercancía en tránsito local y federal.</li>
+                    <li><i class="fas fa-check"></i> Centro de monitoreo GPS activo las 24 horas del día.</li>
+                    <li><i class="fas fa-check"></i> Vehículos de escolta equipados con sistemas de comunicación.</li>
+                    <li><i class="fas fa-check"></i> Protocolos estrictos de reacción inmediata ante emergencias.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-intramuros" class="modal" onclick="closeModalOutside(event, 'modal-intramuros')">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal-intramuros')">&times;</span>
+            <div class="modal-header">
+                <i class="fa-solid fa-building-lock text-gold"></i>
+                <h2>Seguridad Intramuros</h2>
+            </div>
+            <div class="modal-body">
+                <p>Seguridad interna para empresas, corporativos, bodegas y zonas residenciales. Mantenemos el orden y prevenimos cualquier tipo de riesgo en sus instalaciones.</p>
+                <ul class="modal-features">
+                    <li><i class="fas fa-check"></i> Control estricto de accesos y salidas peatonales y vehiculares.</li>
+                    <li><i class="fas fa-check"></i> Rondas de vigilancia perimetral periódicas y aleatorias.</li>
+                    <li><i class="fas fa-check"></i> Manejo detallado de bitácoras y reportes de incidencias.</li>
+                    <li><i class="fas fa-check"></i> Operación integral con sistemas de monitoreo CCTV.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/525548638428?text=Hola%2C%20me%20interesa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20seguridad%20privada%20de%20Z%26O.%20%C2%BFMe%20podr%C3%ADan%20asesorar%3F" class="whatsapp-btn" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js?v=24"></script>
+</body>
+
+</html>

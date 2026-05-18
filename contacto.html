@@ -95,26 +95,40 @@
                             </div>
                         </div>
                     </div>
-                    <form class="contact-form scroll-reveal delay-1">
+                    <form id="main-contact-form" class="contact-form scroll-reveal delay-1">
+                        <input type="hidden" name="access_key" value="0d3ac029-8f80-49a9-bcf5-0378790900dc">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
                         <div class="form-group">
-                            <input type="text" placeholder="Nombre Completo" required>
+                            <input type="text" name="name" id="form-name" placeholder="Nombre Completo" required>
+                            <span class="error-message" id="error-name"></span>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Correo Electrónico" required>
+                            <input type="email" name="email" id="form-email" placeholder="Correo Electrónico" required>
+                            <span class="error-message" id="error-email"></span>
                         </div>
                         <div class="form-group">
-                            <select>
-                                <option value="" disabled selected>Tipo de Servicio</option>
-                                <option value="personal">Protección Personal</option>
-                                <option value="custodios">Custodios</option>
-                                <option value="intramuros">Seguridad Intramuros</option>
-                                <option value="other">Otro</option>
+                            <input type="tel" name="phone" id="form-phone" placeholder="Teléfono de Contacto (10 dígitos)" required>
+                            <span class="error-message" id="error-phone"></span>
+                        </div>
+                        <div class="form-group">
+                            <select name="service" id="form-service" required>
+                                <option value="" disabled selected>Tipo de Servicio Solicitado</option>
+                                <option value="Protección Personal">Protección Personal</option>
+                                <option value="Custodios De Bienes">Custodios De Bienes</option>
+                                <option value="Seguridad Intramuros">Seguridad Intramuros</option>
+                                <option value="Otro">Otro Esquema</option>
                             </select>
+                            <span class="error-message" id="error-service"></span>
                         </div>
                         <div class="form-group">
-                            <textarea rows="5" placeholder="Mensaje" required></textarea>
+                            <textarea name="message" id="form-message" rows="5" placeholder="Cuéntenos sobre sus necesidades de seguridad..." required></textarea>
+                            <span class="error-message" id="error-message-text"></span>
                         </div>
-                        <button type="submit" class="btn-primary btn-block">Enviar Mensaje</button>
+                        <button type="submit" id="btn-submit-form" class="btn-primary btn-block">
+                            <span>Enviar Mensaje</span>
+                            <div class="spinner-form" style="display: none;"></div>
+                        </button>
                     </form>
                 </div>
             </div>
@@ -196,6 +210,19 @@
             </div>
         </div>
     </footer>
+
+    <!-- Confirmation Modal (Web3Forms) -->
+    <div id="modal-success-form" class="modal-success">
+        <div class="modal-success-content">
+            <div class="success-icon-box">
+                <div class="success-icon-circle"></div>
+                <i class="fa-solid fa-check success-check"></i>
+            </div>
+            <h2>¡Contacto Exitoso!</h2>
+            <p>Su solicitud ha sido enviada con total confidencialidad. Un especialista en seguridad de <strong>Z&O</strong> le contactará a la brevedad.</p>
+            <button onclick="closeSuccessModal()" class="btn-primary">Entendido</button>
+        </div>
+    </div>
 
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/525548638428?text=Hola%2C%20me%20interesa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20seguridad%20privada%20de%20Z%26O.%20%C2%BFMe%20podr%C3%ADan%20asesorar%3F" class="whatsapp-btn" target="_blank" aria-label="Contactar por WhatsApp">

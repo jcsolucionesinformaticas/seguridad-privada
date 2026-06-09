@@ -3,19 +3,19 @@
 Este documento registra el progreso de las mejoras realizadas en el sitio web.
 
 ## ✅ Tareas Completadas
-1. **[x] Botón de WhatsApp**: Botón flotante dinámico con micro-animaciones implementado.
-2. **[x] Optimización SEO**: Etiquetas Meta Open Graph configuradas para previsualización profesional en redes sociales.
-3. **[x] Carrusel de Servicios**: Conversión de cuadrícula estática a carrusel interactivo y responsivo.
-4. **[x] Expansión de Catálogo**: Integración de nuevos servicios (Custodios y Seguridad Intramuros) con iconografía personalizada.
-5. **[x] Rediseño Corporativo "Security Blue"**: Migración a un tema claro, limpio y profesional alineado con la identidad institucional.
-6. **[x] Fidelidad de Marca**: Sincronización exacta de la paleta de colores con el logo oficial (`#D4AF37`).
-7. **[x] Accesibilidad**: Etiquetas ARIA añadidas a botones y elementos interactivos.
+1. **[x] Migración a Next.js 15 + TypeScript**: Estructuración modular y profesional de todo el sitio.
+2. **[x] Botón Inteligente de WhatsApp**: Panel flotante con tres canales (Ventas, Reclutamiento, Emergencias 24/7).
+3. **[x] Mapa Interactivo de Cobertura**: Integración de Leaflet con mapa de tema oscuro y pines dorados interactivos.
+4. **[x] Carrusel de Servicios Táctil**: Responsividad total (grilla en escritorio y carrusel deslizable con gestos *swipe* en móviles).
+5. **[x] Formulario e Inserción Real**: Conexión del formulario de contacto directamente con Google Sheets de forma asíncrona.
+6. **[x] Animaciones Framer Motion**: Transiciones de scroll suaves y efectos de entrada optimizados para móvil.
+7. **[x] Ajustes de Responsividad Extrema**: Logotipo escalable y tipografía fluida en pantallas mini (desde 320px).
+8. **[x] Preguntas Frecuentes (FAQ) y Blog Corporativo**: Acordeón animado interactivo en Contacto y Blog con filtros por categoría y rutas dinámicas SSG.
 
 ## ⏳ Próximas Ideas (Pendientes)
-1. **[ ] Sección de Testimonios**: Para generar prueba social y confianza.
-2. **[ ] Preguntas Frecuentes (FAQ)**: Acordeón para resolver dudas rápidas de clientes.
-3. **[ ] Formulario Real**: Conexión del formulario actual con un servicio de correo (Formspree/Backend).
-4. **[ ] Galería de Certificaciones**: Espacio para mostrar sellos de confianza y registros legales.
+1. **[ ] Sección de Testimonios Corporativos (Prueba Social)**: Slider con reseñas y logotipos de clientes satisfechos.
+2. **[ ] Galería de Certificaciones y Permisos (REPSE / Federal)**: Espacio para lucir registros legales y licencias oficiales.
+3. **[ ] Cotizador Interactivo en Pasos (Multi-step Wizard)**: Formulario interactivo por pasos para calificar solicitudes de servicios.
 
 ---
-*Documento actualizado por Antigravity - 2026-05-05*
+*Documento actualizado por Antigravity - 2026-06-04*

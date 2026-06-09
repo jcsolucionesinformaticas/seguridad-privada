@@ -57,7 +57,7 @@ export default function InteractiveMapInner() {
         <h3>Sede Ciudad de México</h3>
         <p class="tag-gold">Oficina Central Corporativa</p>
         <p class="popup-desc"><i class="fa-solid fa-location-dot"></i> Av. 23 de Abril No. 347, Col. Ampliación San Pedro Xalpa, Azcapotzalco, CDMX</p>
-        <p class="popup-desc"><i class="fa-solid fa-phone"></i> +52 55 4863 8428</p>
+        <p class="popup-desc"><i class="fa-solid fa-phone"></i> <a href="https://wa.me/525548638428" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">+52 55 4863 8428</a></p>
         <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+23+de+Abril+347,+San+Pedro+Xalpa,+Azcapotzalco,+02719+Ciudad+de+M%C3%A9xico,+CDMX" target="_blank" rel="noopener noreferrer" class="popup-btn">
           <i class="fa-solid fa-route"></i> Cómo Llegar
         </a>
@@ -74,7 +74,7 @@ export default function InteractiveMapInner() {
         <h3>Sede Monterrey</h3>
         <p class="tag-gold">Dirección Regional Norte</p>
         <p class="popup-desc"><i class="fa-solid fa-location-dot"></i> C. Ordenanzas Reales 205, Col. La Encomienda, Gral. Escobedo, NL</p>
-        <p class="popup-desc"><i class="fa-solid fa-phone"></i> +52 55 4863 8428</p>
+        <p class="popup-desc"><i class="fa-solid fa-phone"></i> <a href="https://wa.me/528180218302" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">+52 81 8021 8302</a></p>
         <a href="https://www.google.com/maps/dir/?api=1&destination=Calle+Ordenanzas+Reales+205,+La+Encomienda,+Escobedo,+Nuevo+Le%C3%B3n" target="_blank" rel="noopener noreferrer" class="popup-btn">
           <i class="fa-solid fa-route"></i> Cómo Llegar
         </a>

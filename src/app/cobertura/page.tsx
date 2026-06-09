@@ -74,7 +74,11 @@ export default function Cobertura() {
                   </li>
                   <li>
                     <i className="fa-solid fa-phone"></i>
-                    <span>+52 55 4863 8428 (Línea Principal)</span>
+                    <span>
+                      <a href="https://wa.me/525548638428" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>
+                        +52 55 4863 8428
+                      </a> (Línea Principal)
+                    </span>
                   </li>
                   <li>
                     <i className="fa-solid fa-envelope"></i>
@@ -128,7 +132,11 @@ export default function Cobertura() {
                   </li>
                   <li>
                     <i className="fa-solid fa-phone"></i>
-                    <span>+52 55 4863 8428 (Enlace Directo)</span>
+                    <span>
+                      <a href="https://wa.me/528180218302" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>
+                        +52 81 8021 8302
+                      </a> (Enlace Directo)
+                    </span>
                   </li>
                   <li>
                     <i className="fa-solid fa-envelope"></i>

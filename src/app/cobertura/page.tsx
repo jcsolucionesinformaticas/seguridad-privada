@@ -82,7 +82,7 @@ export default function Cobertura() {
                   </li>
                   <li>
                     <i className="fa-solid fa-envelope"></i>
-                    <span>contacto@zosecurity.com</span>
+                    <span>contacto@internationalprivatesecurityzyo.com.mx</span>
                   </li>
                   <li>
                     <i className="fa-solid fa-clock"></i>
@@ -140,7 +140,7 @@ export default function Cobertura() {
                   </li>
                   <li>
                     <i className="fa-solid fa-envelope"></i>
-                    <span>mty@zosecurity.com</span>
+                    <span>mty@internationalprivatesecurityzyo.com.mx</span>
                   </li>
                   <li>
                     <i className="fa-solid fa-clock"></i>

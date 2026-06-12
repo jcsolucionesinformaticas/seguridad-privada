@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export default function WhatsAppButton() {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeCity, setActiveCity] = useState<"cdmx" | "mty">("cdmx");
   const panelRef = useRef<HTMLDivElement>(null);
 
   // Close panel on click outside
@@ -20,29 +21,54 @@ export default function WhatsAppButton() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen]);
 
-  const channels = [
-    {
-      title: "Cotizaciones y Ventas",
-      subtitle: "Asesoría comercial personalizada",
-      icon: "fa-solid fa-file-invoice-dollar",
-      url: "https://wa.me/525548638428?text=Hola%2C%20me%20interesa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20seguridad%20privada%20de%20Z%26O.%20%C2%BFMe%20podr%C3%ADan%20asesorar%3F",
-      color: "var(--accent-color)",
-    },
-    {
-      title: "Bolsa de Trabajo",
-      subtitle: "Vacantes y reclutamiento activo",
-      icon: "fa-solid fa-user-tie",
-      url: "https://wa.me/525548638428?text=Hola%2C%20me%20interesa%20obtener%20informaci%C3%B3n%20sobre%20las%20vacantes%20y%20oportunidades%20de%20trabajo%20en%20Z%26O.",
-      color: "var(--accent-color)",
-    },
-    {
-      title: "Emergencias 24/7",
-      subtitle: "Central de Monitoreo y Reacción",
-      icon: "fa-solid fa-phone-volume",
-      url: "tel:+525548638428",
-      color: "#e53e3e", // red warning color for emergency
-    },
-  ];
+  const channels = {
+    cdmx: [
+      {
+        title: "Cotizaciones y Ventas",
+        subtitle: "Asesoría comercial personalizada CDMX",
+        icon: "fa-solid fa-file-invoice-dollar",
+        url: "https://wa.me/525548638428?text=Hola%2C%20me%20interesa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20seguridad%20privada%20de%20Z%26O%20en%20CDMX.%20%C2%BFMe%20podr%C3%ADan%20asesorar%3F",
+        color: "var(--accent-color)",
+      },
+      {
+        title: "Bolsa de Trabajo",
+        subtitle: "Vacantes y reclutamiento CDMX",
+        icon: "fa-solid fa-user-tie",
+        url: "https://wa.me/525548638428?text=Hola%2C%20me%20interesa%20obtener%20informaci%C3%B3n%20sobre%20las%20vacantes%20y%20oportunidades%20de%20trabajo%20en%20Z%26O%20CDMX.",
+        color: "var(--accent-color)",
+      },
+      {
+        title: "Emergencias 24/7",
+        subtitle: "Central de Monitoreo CDMX",
+        icon: "fa-solid fa-phone-volume",
+        url: "tel:+525548638428",
+        color: "#e53e3e", // red warning color for emergency
+      },
+    ],
+    mty: [
+      {
+        title: "Cotizaciones y Ventas",
+        subtitle: "Asesoría comercial personalizada MTY",
+        icon: "fa-solid fa-file-invoice-dollar",
+        url: "https://wa.me/528180218302?text=Hola%2C%20me%20interesa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20seguridad%20privada%20de%20Z%26O%20en%20Monterrey.%20%C2%BFMe%20podr%C3%ADan%20asesorar%3F",
+        color: "var(--accent-color)",
+      },
+      {
+        title: "Bolsa de Trabajo",
+        subtitle: "Vacantes y reclutamiento MTY",
+        icon: "fa-solid fa-user-tie",
+        url: "https://wa.me/528180218302?text=Hola%2C%20me%20interesa%20obtener%20informaci%C3%B3n%20sobre%20las%20vacantes%20y%20oportunidades%20de%20trabajo%20en%20Z%26O%20Monterrey.",
+        color: "var(--accent-color)",
+      },
+      {
+        title: "Emergencias 24/7",
+        subtitle: "Central de Monitoreo Monterrey",
+        icon: "fa-solid fa-phone-volume",
+        url: "tel:+528180218302",
+        color: "#e53e3e", // red warning color for emergency
+      },
+    ],
+  };
 
   return (
     <div className="whatsapp-widget-container" ref={panelRef}>
@@ -75,12 +101,67 @@ export default function WhatsAppButton() {
 
             {/* Body */}
             <div className="whatsapp-panel-body">
-              <p className="whatsapp-intro">
-                Hola 👋. Selecciona el departamento con el que deseas comunicarte:
+              {/* Tab Selector */}
+              <div className="whatsapp-tabs" style={{
+                display: "flex",
+                background: "rgba(255, 255, 255, 0.03)",
+                padding: "4px",
+                borderRadius: "10px",
+                marginBottom: "15px",
+                border: "1px solid rgba(255, 255, 255, 0.05)"
+              }}>
+                <button
+                  type="button"
+                  onClick={() => setActiveCity("cdmx")}
+                  style={{
+                    flex: 1,
+                    padding: "8px 12px",
+                    borderRadius: "8px",
+                    border: "none",
+                    background: activeCity === "cdmx" ? "var(--accent-gradient)" : "transparent",
+                    color: activeCity === "cdmx" ? "#000" : "#fff",
+                    fontWeight: 600,
+                    fontSize: "0.82rem",
+                    cursor: "pointer",
+                    transition: "all 0.25s cubic-bezier(0.4, 0, 0.2, 1)",
+                    boxShadow: activeCity === "cdmx" ? "var(--gold-glow)" : "none"
+                  }}
+                >
+                  Sede CDMX
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setActiveCity("mty")}
+                  style={{
+                    flex: 1,
+                    padding: "8px 12px",
+                    borderRadius: "8px",
+                    border: "none",
+                    background: activeCity === "mty" ? "var(--accent-gradient)" : "transparent",
+                    color: activeCity === "mty" ? "#000" : "#fff",
+                    fontWeight: 600,
+                    fontSize: "0.82rem",
+                    cursor: "pointer",
+                    transition: "all 0.25s cubic-bezier(0.4, 0, 0.2, 1)",
+                    boxShadow: activeCity === "mty" ? "var(--gold-glow)" : "none"
+                  }}
+                >
+                  Sede Monterrey
+                </button>
+              </div>
+
+              <p className="whatsapp-intro" style={{ marginBottom: '12px' }}>
+                Hola 👋. Selecciona el departamento de la sede elegida con el que deseas comunicarte:
               </p>
 
-              <div className="whatsapp-channels-list">
-                {channels.map((channel, idx) => (
+              <motion.div
+                key={activeCity}
+                initial={{ opacity: 0, x: activeCity === "cdmx" ? -10 : 10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.25, ease: "easeOut" }}
+                className="whatsapp-channels-list"
+              >
+                {channels[activeCity].map((channel, idx) => (
                   <a
                     key={idx}
                     href={channel.url}
@@ -102,7 +183,7 @@ export default function WhatsAppButton() {
                     <i className="fa-solid fa-chevron-right channel-arrow"></i>
                   </a>
                 ))}
-              </div>
+              </motion.div>
             </div>
 
             {/* Footer */}

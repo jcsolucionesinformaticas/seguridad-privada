@@ -11,7 +11,7 @@ interface AdminLayoutProps {
 
 export default function AdminDashboardLayout({ children }: AdminLayoutProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-  const [userEmail, setUserEmail] = useState<string | null>("admin@zosecurity.com");
+  const [userEmail, setUserEmail] = useState<string | null>("admin@internationalprivatesecurityzyo.com.mx");
   const [userRole, setUserRole] = useState<string | null>("Administrador");
   const [loading, setLoading] = useState(false);
   

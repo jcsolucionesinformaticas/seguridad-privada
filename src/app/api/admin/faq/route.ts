@@ -5,7 +5,7 @@ import { saveFaq, deleteFaq } from "@/utils/sheets";
 async function isAuthenticated() {
   const cookieStore = await cookies();
   const session = cookieStore.get("admin_session")?.value;
-  return session === "zosecurity_admin_session_token";
+  return session === "internationalprivatesecurityzyo_admin_session_token";
 }
 
 export async function POST(req: NextRequest) {

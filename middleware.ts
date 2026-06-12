@@ -3,7 +3,7 @@ import type { NextRequest } from 'next/server'
 
 export function middleware(request: NextRequest) {
   const session = request.cookies.get('admin_session')?.value
-  const isAuthenticated = session === 'zosecurity_admin_session_token'
+  const isAuthenticated = session === 'internationalprivatesecurityzyo_admin_session_token'
 
   const isLoginPage = request.nextUrl.pathname.startsWith('/admin/login')
   const isAdminRoute = request.nextUrl.pathname.startsWith('/admin')

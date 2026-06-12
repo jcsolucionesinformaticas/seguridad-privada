@@ -151,7 +151,7 @@ export default function AdminLogin() {
                 type="email"
                 id="email"
                 required
-                placeholder="usuario@zosecurity.com"
+                placeholder="usuario@internationalprivatesecurityzyo.com.mx"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 style={{

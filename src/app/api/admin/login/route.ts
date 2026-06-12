@@ -5,12 +5,12 @@ export async function POST(req: NextRequest) {
   try {
     const { email, password } = await req.json();
 
-    const adminEmail = process.env.ADMIN_EMAIL || "admin@zosecurity.com";
+    const adminEmail = process.env.ADMIN_EMAIL || "admin@internationalprivatesecurityzyo.com.mx";
     const adminPassword = process.env.ADMIN_PASSWORD || "ContraseñaSuperSeguraZ&O";
 
     if (email === adminEmail && password === adminPassword) {
       const cookieStore = await cookies();
-      cookieStore.set("admin_session", "zosecurity_admin_session_token", {
+      cookieStore.set("admin_session", "internationalprivatesecurityzyo_admin_session_token", {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
         sameSite: "lax",

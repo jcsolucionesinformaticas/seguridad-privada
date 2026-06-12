@@ -47,11 +47,20 @@ export default function Contacto() {
                 <i className="fas fa-phone text-gold"></i>
                 <div>
                   <p>
-                    <strong style={{ color: 'var(--accent-color)', fontSize: '1.15rem' }}>Llámenos</strong>
+                    <strong style={{ color: 'var(--accent-color)', fontSize: '1.15rem' }}>Llámenos / WhatsApp</strong>
                     <br />
-                    <a href="tel:+525548638428" style={{ color: 'inherit', decoration: 'none' } as React.CSSProperties}>
-                      +52 55 4863 8428
-                    </a>
+                    <span style={{ display: 'block', marginBottom: '4px' }}>
+                      <strong>CDMX: </strong>
+                      <a href="https://wa.me/525548638428" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>
+                        +52 55 4863 8428
+                      </a>
+                    </span>
+                    <span>
+                      <strong>Monterrey: </strong>
+                      <a href="https://wa.me/528180218302" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>
+                        +52 81 8021 8302
+                      </a>
+                    </span>
                   </p>
                 </div>
               </div>
@@ -61,7 +70,7 @@ export default function Contacto() {
                   <p>
                     <strong style={{ color: 'var(--accent-color)', fontSize: '1.15rem' }}>Escríbanos</strong>
                     <br />
-                    contacto@zosecurity.com
+                    contacto@internationalprivatesecurityzyo.com.mx
                   </p>
                 </div>
               </div>

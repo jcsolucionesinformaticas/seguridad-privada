@@ -2,9 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 
-const GOOGLE_SHEETS_URL =
-  process.env.NEXT_PUBLIC_SHEETS_WEBAPP_URL ||
-  "https://script.google.com/macros/s/AKfycbxXMKjJ2u-PLwvpKbHjBF6LcsyK9Ky08QFHXfExGW8EmT2dLJRo1gz-_mbNmAmwI8FhIw/exec";
+const CONTACT_API_URL = "/api/contacto";
 
 interface FormFields {
   name: string;
@@ -184,17 +182,17 @@ export default function ContactForm() {
         message: formData.message,
       };
 
-      const response = await fetch(GOOGLE_SHEETS_URL, {
+      const response = await fetch(CONTACT_API_URL, {
         method: "POST",
-        mode: "no-cors",
         headers: {
-          "Content-Type": "text/plain",
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(payload),
       });
 
-      // Con no-cors (Google Sheets), la respuesta es opaca (status 0).
-      // Asumimos éxito si no entra al catch de error de red.
+      if (!response.ok) {
+        throw new Error("Error al enviar el mensaje.");
+      }
       setFormData({
         name: "",
         email: "",

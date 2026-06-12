@@ -62,11 +62,18 @@ export default function Footer() {
             </li>
             <li>
               <i className="fa-solid fa-phone"></i>
-              <a href="tel:+525548638428">+52 55 4863 8428</a>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                <a href="https://wa.me/525548638428" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
+                  CDMX: +52 55 4863 8428
+                </a>
+                <a href="https://wa.me/528180218302" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
+                  MTY: +52 81 8021 8302
+                </a>
+              </div>
             </li>
             <li>
               <i className="fa-solid fa-envelope"></i>
-              <a href="mailto:contacto@intersecurityzo.com">contacto@intersecurityzo.com</a>
+              <a href="mailto:contacto@internationalprivatesecurityzyo.com.mx">contacto@internationalprivatesecurityzyo.com.mx</a>
             </li>
           </ul>
           <div className="footer-badge">

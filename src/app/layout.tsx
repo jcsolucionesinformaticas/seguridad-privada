@@ -18,11 +18,11 @@ export const metadata: Metadata = {
     template: "%s | INTERNATIONAL PRIVATE SECURITY Z&O",
   },
   description: "Servicios de seguridad privada de élite. Protección personal, vigilancia, custodios y seguridad intramuros.",
-  metadataBase: new URL("https://zosecurity.com"),
+  metadataBase: new URL("https://internationalprivatesecurityzyo.com.mx"),
   openGraph: {
     title: "INTERNATIONAL PRIVATE SECURITY | Z&O S. DE R.L. C.V.",
     description: "Protección de élite para quienes exigen lo mejor. Vigilancia, escoltas, custodios y seguridad estratégica.",
-    url: "https://zosecurity.com",
+    url: "https://internationalprivatesecurityzyo.com.mx",
     siteName: "INTERNATIONAL PRIVATE SECURITY Z&O",
     images: [
       {
